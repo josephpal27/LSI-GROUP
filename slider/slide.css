@@ -1,0 +1,50 @@
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-slide {
+    position: relative; 
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-slide img {
+    width: 20rem;
+    height: 90%;
+    display: block;
+    margin: 0 4rem 0 3rem;
+}
+
+.slider-slide .title{
+    /* background-color: red; */
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    font-weight: 500;
+    max-width: 90%;
+    margin-left: 5%;
+}
+
+.slider-caption {
+    transition: opacity 0.5s ease-in-out;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.slider-track {
+    flex-grow: 1;
+    margin-top: 3rem;
+    margin-bottom: 6rem;
+}

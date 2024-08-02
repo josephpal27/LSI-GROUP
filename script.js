@@ -344,3 +344,90 @@ let backToTopBtn = document.getElementById('back-to-top');
 backToTopBtn.addEventListener('click', () => {
     window.scrollTo(0,0);
 })
+
+
+
+
+// --------------------------------------------------------------------------------------------------------------------------------
+
+// Functionaloity For Slider
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sliderContainer = document.querySelector(".slider-container");
+    const sliderTrack = document.querySelector(".slider-track");
+    const slides = document.querySelectorAll(".slider-slide");
+    const slideCount = slides.length;
+    let slideWidth = slides[0].offsetWidth;
+    let currentIndex = 0;
+
+    // Clone slides for infinite scrolling
+    for (let i = 0; i < slideCount; i++) {
+        const clone = slides[i].cloneNode(true);
+        sliderTrack.appendChild(clone);
+    }
+
+    function moveSlides() {
+        sliderTrack.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+        updateCenteredSlide();
+    }
+
+    function updateCenteredSlide() {
+        slides.forEach((slide, index) => {
+            const slideOffset = slide.getBoundingClientRect().left;
+            const containerCenter = sliderContainer.getBoundingClientRect().left + sliderContainer.offsetWidth / 2;
+            const slideCenter = slideOffset + slide.offsetWidth / 2;
+
+            if (Math.abs(slideCenter - containerCenter) < slideWidth / 2) {
+                slide.classList.add('center');
+                if ((index + 1) % 4 === 0) {
+                    slide.classList.add('scale-up');
+                } else {
+                    slide.classList.remove('scale-up');
+                }
+            } else {
+                slide.classList.remove('center');
+                slide.classList.remove('scale-up');
+            }
+        });
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        if (currentIndex >= slideCount) {
+            currentIndex = 0;
+        } else if (currentIndex < 0) {
+            currentIndex = slideCount - 1;
+        }
+        moveSlides();
+    }
+
+    document.querySelector(".next-button").addEventListener("click", () => {
+        currentIndex++;
+        if (currentIndex >= slideCount) {
+            currentIndex = 0;
+        }
+        moveSlides();
+    });
+
+    document.querySelector(".prev-button").addEventListener("click", () => {
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = slideCount - 1;
+        }
+        moveSlides();
+    });
+
+    let slideInterval = setInterval(() => {
+        currentIndex++;
+        if (currentIndex >= slideCount) {
+            currentIndex = 0;
+        }
+        moveSlides();
+    }, 3000);
+
+    window.addEventListener("resize", () => {
+        slideWidth = slides[0].offsetWidth;
+        moveSlides();
+    });
+});
+

@@ -463,18 +463,22 @@ main .card .card-btn button:hover{
     transform: translateY(-50%);
     /* background-color: rgba(0, 0, 0, 0.5); */
     background-color: transparent;
-    color: #000;
     border: none;
     padding: 0.5rem 1rem;
     cursor: pointer;
     z-index: 10;
 }
 .slider-button i{
-    font-size: 2rem;
+    font-size: 1.9rem;
+    color: #5a5959;
+    transition: all 0.2s ease;
+}
+.slider-button i:hover{
+    color: #000;
 }
 
 .prev-button {
-    left: 10px;
+    left: 1px;
 }
 
 .next-button {

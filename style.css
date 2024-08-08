@@ -609,52 +609,55 @@ main .card .card-btn button:hover{
 footer{
     background-color: #ec9122;
     padding: 3rem 0;
-}
-.footer{
+    position: relative;
+    overflow: hidden;
+    margin-top: 5rem;
+  }
+  .footer{
     display: flex;
     justify-content: space-between;
-}
-.footer .left{
+  }
+  .footer .left{
     width: 29%;
     color: #fff;
-}
-.footer .left img{
+  }
+  .footer .left img{
     background-color: #fff;
     padding: 0.5rem 0.8rem;
     margin-top: 1rem;
-}
-.footer .left a{
+  }
+  .footer .left a{
     color: #fff;
-}
-.footer .left .foot-icons{
+  }
+  .footer .left .foot-icons{
     margin-top: 2rem;
-}
-.footer .left .foot-icons i{
+  }
+  .footer .left .foot-icons i{
     margin-right: 0.7rem;
     font-size: 1.3rem;
     transition: all 0.2s ease;
-}
-.footer .left .foot-icons i:hover{
+  }
+  .footer .left .foot-icons i:hover{
     scale: 1.1;
     color: #5f86c3;
-}
-
-.footer .center{
+  }
+  
+  .footer .center{
     width: 30%;
-}
-.footer .center h3{
+  }
+  .footer .center h3{
     font-size: 1.3rem;
     color: #fff;
     margin-bottom: 1rem;
-}
-.footer .center img{
+  }
+  .footer .center img{
     width: 100%;
-    position: relative;
-}
-.footer .center button{
+    /* position: relative; */
+  }
+  .footer .center button{
     position: absolute;
     left: 75%;
-    top: 44%;
+    top: 46%;
     border: none;
     outline: none;
     font-size: 0.8rem;
@@ -663,53 +666,71 @@ footer{
     box-shadow: 2px 2px 3px #616161;
     background-color: #f9f9f9;
     transition: all 0.2s ease;
-}
-.footer .center button:hover{
+  }
+  .footer .center button:hover{
     background-color: #ededede4;
-}
-.footer .center .linkedin-content{
+  }
+  .footer .center .linkedin-content{
    height: 150px;
    overflow-y: scroll;
    padding: 10px;
    background-color: #d2d0d0;
-}
-
-.footer .right{
+  }
+  
+  .footer .end{
    width: 22%;
    color: #fff;
-}
-.footer .right h3{
+   display: flex;
+   flex-direction: column;
+  }
+  .footer .end h3{
    font-size: 1.1rem;
-}
-.footer .right p{
+  }
+  .footer .end p{
    font-size: 0.8rem;
-}
-.footer .right div{
+  }
+  .footer .end div{
    margin-bottom: 1rem;
-}
-.footer .right img{
+  }
+  /* .footer .end img{
    width: 30px;
    margin-left: 90%;
    margin-top: 1.3rem;
    cursor: pointer;
    transition: all 0.3s ease;
-}
-.footer .right img:hover{
+  } */
+  /* .footer .end img:hover{
    scale: 1.1;
-}
-.footer-line .line{
+  } */
+  .footer-line .line{
     width: 100%;
     height: 1.5px;
     background-color: #fff;
-}
-.copyright{
+    margin-top: 1rem;
+  }
+  .copyright{
    display: flex;
    justify-content: space-between;
    color: #fff;
    margin-top: 7px;
    font-size: 0.9rem;
-}
+  }
 
-/* Footer Styles Ends Here */
+  #back-to-top{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    bottom: 1.2rem;
+    right: 1.4rem;
+    box-shadow: rgba(0, 0, 0, 0.308) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: all 0.3s ease;
+  }
+  #back-to-top:hover{
+      scale: 1.1;
+  }
+
+  /* Footer Styles Ends Here */
 
 

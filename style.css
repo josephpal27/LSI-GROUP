@@ -191,12 +191,13 @@ main .left-text h2{
 
 /* Cards Section */
 main .cards-row{
+    width: 90%;
     display: flex;
     justify-content: space-between;
     padding: 2rem 3rem;
     position: absolute;
     bottom: 4%;
-    left: 6%;
+    left: 5%;
     /* align-content: center; */
     /* background-color: red; */
 } 
@@ -343,6 +344,7 @@ main .card .card-btn button:hover{
     width: 350px;
     margin-bottom: 3rem;
     transition: opacity 0.3s ease;
+    border-radius: 10px;
 }
 /* Expertise Section Styles Ends Here */
 
